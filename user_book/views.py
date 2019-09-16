@@ -1,4 +1,3 @@
-from django import views
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404, redirect
@@ -55,24 +54,3 @@ class BookUpdateView(UpdateView):
         form.save()
         messages.success(self.request, 'Книга отредактирована!')
         return super().form_valid(form)
-
-
-class BookEditView(views.View):
-    template_name = 'user_book/book_edit.html'
-
-    def post(self, request, pk):
-        query = get_object_or_404(Book, pk=pk)
-        form = BookCreateForm(request.POST, request.FILES, instance=query)
-        if form.is_valid():
-            instance = form.save(commit=False)
-            instance.user = request.user
-            instance.save()
-            messages.success(request, 'Книга отредактирована!')
-            return redirect('user_book:book_edit', query.pk)
-        else:
-            return render(request, self.template_name, {'query': query, 'form': form})
-
-    def get(self, request, pk):
-        query = get_object_or_404(Book, pk=pk)
-        form = BookCreateForm(instance=query)
-        return render(request, self.template_name, {'query': query, 'form': form})
