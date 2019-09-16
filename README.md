@@ -1,6 +1,6 @@
 <h1>User_Book App</h1>
 
-It's a small web-application where authorized users can create personal lists of books they read. Every user has the ability to edit each book.
+It's a small web-application where users can create personal lists of books they read. Every user has the ability to edit each book.
 
 The goal of this application is to better understand the basics of Django framework and build it on PostgreSQL database.
 
