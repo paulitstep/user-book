@@ -1,0 +1,33 @@
+{% extends 'user_book/base.html' %}
+{% load crispy_forms_tags %}
+{% load thumbnail %}
+
+{% block title %}
+    Редактирование книги
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+ <div class="col py-3">
+        <div class="card text-center" style="width: 18rem;">
+            {% thumbnail book.image "200x200" as image %}
+            <a href=""><img src='{{ image.url }}'></a>
+            {% endthumbnail %}
+            <h5>{{ book.title }}</h5>
+            <h5 class="text-muted"><small>{{ book.author }}, {{ book.published_year }}</small></h5>
+        </div>
+ </div>
+</div>
+
+<form class="pt-5" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Редактировать книгу</legend>
+        {{ form|crispy }}
+    </fieldset>
+    <div class="form-group">
+        <button class="btn btn-outline-info" type="submit">Редактировать</button>
+    </div>
+</form>
+
+{% endblock %}

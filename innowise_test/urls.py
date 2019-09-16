@@ -17,12 +17,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from django.contrib import admin
-from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', LoginView.as_view(template_name='user_book/login.html'), name='login'),
-    path('logout/', LogoutView.as_view(template_name='user_book/logout.html'), name='logout'),
     path('', include(('user_book.urls', 'user_book'), namespace='user_book')),
+    path('account/', include('django.contrib.auth.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

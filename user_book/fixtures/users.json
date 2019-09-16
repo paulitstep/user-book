@@ -1,0 +1,38 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$f0hrf2aducGL$YkpB4vpnjlVVvYAgZdmhaMc/xboZjwe2YcsRF2wSngw=",
+        "last_login": "2019-09-16T12:57:52.680Z",
+        "is_superuser": true,
+        "username": "innowise",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-08-28T11:19:34.990Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "TestUser",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-09-13T14:09:03.297Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

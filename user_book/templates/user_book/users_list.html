@@ -1,0 +1,36 @@
+{% extends 'user_book/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Пользователи
+{% endblock %}
+
+{% block content %}
+{% if request.user.is_authenticated %}
+    <h2 class="py-3"> Приветствуем, {{ request.user.username }}! (<a href="{% url 'logout' %}">Выйти</a>)</h2>
+{% else %}
+    <h2 class="py-3"> Вы не авторизованы. <a href="{% url 'login' %}">Войти</a></h2>
+{% endif %}
+<hr>
+
+<h2 class="py-4">Пользователи библиотеки:</h2>
+<div class="row">
+    <div class="col-6">
+        {% for user in users %}
+        <p><a class="h3 mr-5" href="{% url 'user_book:user-detail' user.username %}">{{ user.username }}</a>
+            Количество книг: {{ user.books.count }}</p>
+        {% endfor %}
+    </div>
+</div>
+
+
+<form method="POST" class="pt-5"> {% csrf_token %}
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Добавить пользователя</legend>
+        {{ form|crispy }}
+    </fieldset>
+    <div class="form-group">
+        <button class="btn btn-outline-info" type="submit">Добавить</button>
+    </div>
+</form>
+{% endblock %}

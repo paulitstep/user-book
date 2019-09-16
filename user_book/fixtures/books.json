@@ -1,0 +1,122 @@
+[
+{
+    "model": "user_book.book",
+    "pk": 5,
+    "fields": {
+        "user": 1,
+        "image": "books/2019/09/12/1984.jpg",
+        "title": "1984 (\u043c)",
+        "author": "\u0414\u0436\u043e\u0440\u0434\u0436 \u041e\u0440\u0443\u044d\u043b\u043b",
+        "published_year": 2019,
+        "created": "2019-09-12"
+    }
+},
+{
+    "model": "user_book.book",
+    "pk": 7,
+    "fields": {
+        "user": 1,
+        "image": "books/2019/09/13/\u0431\u0435\u0441\u044b_V0IldtV.jpg",
+        "title": "\u0411\u0435\u0441\u044b",
+        "author": "\u0424\u0435\u0434\u043e\u0440 \u0414\u043e\u0441\u0442\u043e\u0435\u0432\u0441\u043a\u0438\u0439",
+        "published_year": 2019,
+        "created": "2019-09-13"
+    }
+},
+{
+    "model": "user_book.book",
+    "pk": 11,
+    "fields": {
+        "user": 1,
+        "image": "books/2019/09/13/\u0434\u0435\u0432\u0443\u0448\u043a\u0430_\u0432_\u043f\u043e\u0435\u0437\u0434\u0435.jpg",
+        "title": "\u0414\u0435\u0432\u0443\u0448\u043a\u0430 \u0432 \u043f\u043e\u0435\u0437\u0434\u0435",
+        "author": "\u041f\u043e\u043b\u0430 \u0425\u043e\u043a\u0438\u043d\u0441",
+        "published_year": 2019,
+        "created": "2019-09-13"
+    }
+},
+{
+    "model": "user_book.book",
+    "pk": 13,
+    "fields": {
+        "user": 1,
+        "image": "books/2019/09/13/\u0438\u0434\u0438\u043e\u0442.jpg",
+        "title": "\u0418\u0434\u0438\u043e\u0442",
+        "author": "\u0424\u0435\u0434\u043e\u0440 \u0414\u043e\u0441\u0442\u043e\u0435\u0432\u0441\u043a\u0438\u0439",
+        "published_year": 2019,
+        "created": "2019-09-13"
+    }
+},
+{
+    "model": "user_book.book",
+    "pk": 14,
+    "fields": {
+        "user": 4,
+        "image": "books/2019/09/13/1984.jpg",
+        "title": "1984 (\u043c)",
+        "author": "\u0414\u0436\u043e\u0440\u0434\u0436 \u041e\u0440\u0443\u044d\u043b\u043b",
+        "published_year": 2019,
+        "created": "2019-09-13"
+    }
+},
+{
+    "model": "user_book.book",
+    "pk": 15,
+    "fields": {
+        "user": 4,
+        "image": "books/2019/09/16/\u0431\u0435\u0441\u044b.jpg",
+        "title": "\u0411\u0435\u0441\u044b",
+        "author": "\u0424\u0435\u0434\u043e\u0440 \u0414\u043e\u0441\u0442\u043e\u0435\u0432\u0441\u043a\u0438\u0439",
+        "published_year": 2019,
+        "created": "2019-09-16"
+    }
+},
+{
+    "model": "user_book.book",
+    "pk": 16,
+    "fields": {
+        "user": 4,
+        "image": "books/2019/09/16/\u0432\u043e\u0439\u043d\u0430_\u0438_\u043c\u0438\u0440.jpg",
+        "title": "\u0412\u043e\u0439\u043d\u0430 \u0438 \u043c\u0438\u0440 (\u0432 2-\u0445 \u0442\u043e\u043c\u0430\u0445)",
+        "author": "\u041b\u0435\u0432 \u0422\u043e\u043b\u0441\u0442\u043e\u0439",
+        "published_year": 2019,
+        "created": "2019-09-16"
+    }
+},
+{
+    "model": "user_book.book",
+    "pk": 18,
+    "fields": {
+        "user": 4,
+        "image": "books/2019/09/16/\u0434\u043e\u043a\u0442\u043e\u0440_\u0436\u0438\u0432\u0430\u0433\u043e_83oZ1FH.jpg",
+        "title": "\u0414\u043e\u043a\u0442\u043e\u0440 \u0416\u0438\u0432\u0430\u0433\u043e",
+        "author": "\u0411\u043e\u0440\u0438\u0441 \u041f\u0430\u0441\u0442\u0435\u0440\u043d\u0430\u043a",
+        "published_year": 2019,
+        "created": "2019-09-16"
+    }
+},
+{
+    "model": "user_book.book",
+    "pk": 19,
+    "fields": {
+        "user": 4,
+        "image": "books/2019/09/16/\u0438\u0434\u0438\u043e\u0442.jpg",
+        "title": "\u0418\u0434\u0438\u043e\u0442",
+        "author": "\u0424\u0435\u0434\u043e\u0440 \u0414\u043e\u0441\u0442\u043e\u0435\u0432\u0441\u043a\u0438\u0439",
+        "published_year": 2019,
+        "created": "2019-09-16"
+    }
+},
+{
+    "model": "user_book.book",
+    "pk": 20,
+    "fields": {
+        "user": 1,
+        "image": "books/2019/09/16/\u0437\u043e\u0432_\u043a\u0443\u043a\u0443\u0448\u043a\u0438.jpg",
+        "title": "\u0417\u043e\u0432 \u041a\u0443\u043a\u0443\u0448\u043a\u0438 (\u043c)",
+        "author": "\u0414\u0436\u043e\u0430\u043d \u0420\u043e\u0443\u043b\u0438\u043d\u0433",
+        "published_year": 2019,
+        "created": "2019-09-16"
+    }
+}
+]
