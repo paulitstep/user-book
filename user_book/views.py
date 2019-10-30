@@ -8,6 +8,7 @@ from django.views.generic.base import View
 from .forms import UserCreationForm, BookCreateForm
 from .models import Book
 
+
 class UsersListView(FormView):
     model = User
     template_name = 'user_book/users_list.html'
@@ -42,6 +43,7 @@ class UserDetailView(View):
             return redirect('user_book:user-detail', user.username)
         else:
             return render(request, 'user_book/user_detail.html', {'user': user, 'form': form})
+
 
 class BookUpdateView(UpdateView):
     model = Book
