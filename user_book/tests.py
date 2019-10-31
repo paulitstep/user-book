@@ -1,8 +1,9 @@
-from django.contrib.auth.models import User
-from django.test import TestCase
+from django.contrib.auth.models import AnonymousUser, User
+from django.test import TestCase, RequestFactory
 from django.urls import reverse
 
 from .models import Book
+from .views import UserDetailView, BookUpdateView
 
 
 class BookModelTests(TestCase):
@@ -108,3 +109,38 @@ class BookUpdateViewTests(TestCase):
 
         self.assertEqual(book.title, 'Testing is cool!')
         self.assertEqual(book.author, 'TestLab')
+
+
+class BookUpdateViewAdvanceTests(TestCase):
+    def setUp(self):
+        self.factory = RequestFactory()
+        self.user = User.objects.create_user(username='New User')
+
+    def test_user_auth(self):
+        obj = Book.objects.create(title='A new book', author='A new author', published_year=2019)
+        url = reverse('user_book:book-update', kwargs={'pk': obj.pk})
+        request = self.factory.get(url)
+        request.user = self.user
+
+        response = BookUpdateView.as_view()(request, pk=obj.pk)
+
+        self.assertEqual(response.status_code, 200)
+
+    def test_user_get(self):
+        url = reverse('user_book:user-detail', kwargs={'username': self.user.username})
+        request = self.factory.get(url)
+        request.user = self.user
+
+        response = UserDetailView.as_view()(request, username=self.user.username)
+
+        self.assertEqual(response.status_code, 200)
+
+    def test_unauth_user(self):
+        obj = Book.objects.create(title='A new book', author='A new author', published_year=2019)
+        url = reverse('user_book:book-update', kwargs={'pk': obj.pk})
+        request = self.factory.get(url)
+        request.user = AnonymousUser()
+
+        response = BookUpdateView.as_view()(request, pk=obj.pk)
+
+        self.assertEqual(response.status_code, 200)
